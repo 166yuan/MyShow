@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<title>admin-LTE</title>
 	<link rel="stylesheet" href="css/lte.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div class="wraper">
+	<div class="wraper" id="wraper">
 		<header class="clearfix">
 			<a href="" class="logo">
 				<span>
@@ -26,22 +26,87 @@
 					<div class="pull-right">
 						<p>我的博客</p>
 						<a href="javascript:void(0)" style="margin-top:3px;">
-							<i class="online active"></i>
+							<i class="fa fa-circle text-success"></i>
 							在线
 						</a>
 					</div>
 				</div>
 
-				<form action="">
+				<form action="" class="form">
 					<div class="input-group">
-						<input type="text" class="search-input" />
-						<span>
-							<button>
-								搜索
+						<input type="text" class="search-input" placeholder="请输入内容"/>
+							<button class="input-btn">
+								<i class="fa fa-search"></i>
 							</button>
-						</span>
 					</div>
 				</form>
+
+				<ul class="slider-menu">
+					<li class="list-header">主菜单</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-dashboard"></i>
+							<span>前端</span>
+						</a>
+						<ul class="submenu"> 
+							<li>
+								<a class="">
+									<i class="fa fa-circle-o"></i>
+									 node.js
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-circle-o"></i>
+									 io.js
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-circle-o"></i>
+									 sea.js
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-circle-o"></i>
+									 express
+								</a>
+							</li>
+						</ul>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-dashboard"></i>
+							<span>java</span>
+						</a>
+						<ul class="submenu"> 
+							<li>
+								<a class="">
+									<i class="fa fa-circle-o"></i>
+									 spring io platfrom
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-circle-o"></i>
+									 hibernate
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-circle-o"></i>
+									 mybatis
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fa fa-circle-o"></i>
+									 YouTube
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</section>
 		</aside>
 	</div>
