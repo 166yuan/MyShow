@@ -100,13 +100,15 @@ header{
 	background-color: #EEE;
 }
 .gallery{
-	width: 76%;
+	width: 80%;
 	margin: 0 auto;
 	background-color: inherit;
 }
 .gallery_wrap{
 	width: 320px;
-	height: 400px;
+	min-height: 400px;
 	background-color: #ffffff;
 	float: left;
+	padding:10px 10px 20px 10px;
+	margin-left: 5px;
 }
