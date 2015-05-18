@@ -109,7 +109,7 @@ header{
 	margin-top: 10px;
 }
 .gallery{
-	width: 80%;
+	width: 990px;
 	margin: 0 auto;
 	background-color: inherit;
 }
@@ -128,6 +128,68 @@ header{
 .brief{
 	width: 100%;
 	height: 20em;
-	margin-top: 4em;
+	margin-top: 8em;
+	position: relative;
+	padding-bottom: 200px;
 	background-color: #ffffff;
+}
+
+.avator{
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+	border-radius: 80px;
+}
+
+.introduction{
+	position: relative;
+	padding-top: 150px;
+	width: 600px;
+	margin: 0 auto;
+}
+.introduction h1{
+	font-size: 20px;
+	text-align: center;
+	font-family: Century Gothic;
+	color: #000000;
+}
+.introduction p{
+	margin-top: 50px;
+	text-indent: 2em;
+}
+footer{
+	background-color: #000000;
+}
+.foobar{
+	width: 240px;
+	margin: 0 auto;
+	padding: 10px 0 10px 0 ;
+}
+.foobar li{
+float: left;
+margin-right: 20px;
+color: #ffffff;
+}
+.link-title{
+	margin: 0 auto;
+	color: #ccc;
+}
+.link-title>li{
+	float: left;
+	margin: 40px 0px 90px 14%;	
+}
+.submenu{
+	margin-top: 20px;
+}
+.submenu>li{
+	margin-top: 10px;
+	color: #ffffff;
+}
+.about{
+	color:white;
+	text-align: center;
+}
+.about img{
+	margin-top: 5px;
 }
