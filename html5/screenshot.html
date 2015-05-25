@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Screenshot</title>
+</head>
+<style>
+::selection {
+  color: #eee;
+  background: darkred;
+}
+body ::-webkit-scrollbar {
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+body ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .1);
+  background-clip: padding-box;
+  border: solid transparent;
+  min-height: 28px;
+  padding: 100px 0 0;
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+  border-width: 1px 1px 1px 6px;
+}
+body ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body ::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+}
+body ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #222;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  padding: 2em;
+  background: -webkit-gradient(radial, center center, 500, center center, 1400, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.6))) #fff;
+  background: -moz-radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
+  background: -webkit-radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
+  background: -ms-radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
+  background: -o-radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
+  background: radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
+  box-sizing: border-box;
+}
+a {
+  color: navy;
+}
+details {
+  position: absolute;
+  top: 0;
+  left: 1em;
+  margin: 1em 0;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 5px;
+  max-width: 600px;
+  font-size: 10pt;
+  z-index: 100;
+  background: #F7F7F7;
+}
+details > div {
+  margin: 10px 0;
+}
+details > summary {
+  cursor: pointer;
+  white-space: nowrap;
+}
+button {
+  display: inline-block;
+  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#F9F9F9), to(#E3E3E3));
+  background: -webkit-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+  background: -moz-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+  background: -ms-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+  background: -o-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+  background: linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
+  border: 1px solid #999;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+button:not(:disabled):hover,
+button:not(:disabled).active {
+  border-color: black;
+}
+button:not(:disabled):active,
+button:not(:disabled).active {
+  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#E3E3E3), to(#F9F9F9));
+  background: -webkit-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+  background: -moz-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+  background: -ms-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+  background: -o-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+  background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+}
+input[type="range"]{
+  -webkit-appearance: none !important;
+  background-color: #555;
+  box-shadow: 0 -1px 1px rgba(255,255,255,0.5) inset;
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 20px;
+  height: 8px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,1);
+  cursor: pointer;
+  border-top: 1px solid #fff;
+  background: #ccc -webkit-linear-gradient(top, rgb(240, 240, 240), rgb(210, 210, 210));
+}
+h2 {
+  margin: 0;
+  font-weight: 300;
+}
+@-webkit-keyframes glowRed {
+  from {
+    box-shadow: rgba(255, 0, 0, 0) 0 0 0;
+  }
+  50% {
+    box-shadow: rgba(255, 0, 0, 1) 0 0 15px 1px;
+  }
+  to {
+    box-shadow: rgba(255, 0, 0, 0) 0 0 0;
+  }
+}
+html, body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  box-sizing: border-box;
+}
+article {
+  text-align: center;
+}
+#monitor {
+  /*-webkit-transform: scaleX(-1);*/
+  height: 300px;
+  /*-webkit-box-reflect: below 20px -webkit-linear-gradient(top, transparent, transparent 80%, rgba(255,255,255,0.2));*/
+}
+#live {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  font-weight: 600;
+  font-family: Arial;
+  font-size: 16pt;
+  right: 35px;
+  top: 20px;
+  text-shadow: 1px 1px red;
+  letter-spacing: 1px;
+}
+#live:before {
+  content: '';
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: red;
+  position: absolute;
+  left: -20px;
+  margin-top: 5px;
+}
+#gallery img {
+  position: absolute;
+  z-index: -1;
+  height: 75px;
+}
+#gallery img {
+  float: left;
+  height: 75px;
+}
+.container {
+  padding: 10px 25px 5px 25px;
+  background: black;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+h1 {
+  font-weight: 300;
+}
+.blur {
+  -webkit-filter: blur(3px);
+}
+.brightness {
+  -webkit-filter: brightness(5);
+}
+.contrast {
+  -webkit-filter: contrast(8);
+}
+.hue-rotate {
+  -webkit-filter: hue-rotate(90deg);
+}
+.hue-rotate2 {
+  -webkit-filter: hue-rotate(180deg);
+}
+.hue-rotate3 {
+  -webkit-filter: hue-rotate(270deg);
+}
+.saturate {
+  -webkit-filter: saturate(10);
+}
+.grayscale {
+  -webkit-filter: grayscale(1);
+}
+.sepia {
+  -webkit-filter: sepia(1);
+}
+.invert {
+  -webkit-filter: invert(1)
+}
+</style>
+<body>
+	<article>
+ <h1>CSS Filters Photobooth</h1>
+ <section id="app" hidden>
+  <div class="container"><span id="live">LIVE</span><video id="monitor" autoplay onclick="changeFilter(this)" title="Click me to see different filters"></video></div>
+  <p>Click the video to see different CSS filters</p>
+ </section>
+ <p><button onclick="init(this)">Capture</button></p>
+ <div id="splash">
+  <p id="errorMessage">&uarr;<br>Click to begin</p>
+ </div>
+ <div id="gallery"></div>
+</article>
+<canvas id="photo" style="display:none"></canvas>
+</body>
+</html>
+<script>
+navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.getUserMedia;
+window.URL = window.URL || window.webkitURL;
+
+var app = document.getElementById('app');
+var video = document.getElementById('monitor');
+var canvas = document.getElementById('photo');
+var effect = document.getElementById('effect');
+var gallery = document.getElementById('gallery');
+var ctx = canvas.getContext('2d');
+var intervalId = null;
+var idx = 0;
+var filters = [
+  'grayscale',
+  'sepia',
+  'blur',
+  'brightness',
+  'contrast',
+  'hue-rotate', 'hue-rotate2', 'hue-rotate3',
+  'saturate',
+  'invert',
+  ''
+];
+
+function changeFilter(el) {
+  el.className = '';
+  var effect = filters[idx++ % filters.length];
+  if (effect) {
+    el.classList.add(effect);
+  }
+}
+
+function gotStream(stream) {
+  if (window.URL) {
+    video.src = window.URL.createObjectURL(stream);
+  } else {
+    video.src = stream; // Opera.
+  }
+
+  video.onerror = function(e) {
+    stream.stop();
+  };
+
+  stream.onended = noStream;
+
+  video.onloadedmetadata = function(e) { // Not firing in Chrome. See crbug.com/110938.
+    document.getElementById('splash').hidden = true;
+    document.getElementById('app').hidden = false;
+  };
+
+  // Since video.onloadedmetadata isn't firing for getUserMedia video, we have
+  // to fake it.
+  setTimeout(function() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    document.getElementById('splash').hidden = true;
+    document.getElementById('app').hidden = false;
+  }, 50);
+}
+
+function noStream(e) {
+  var msg = 'No camera available.';
+  if (e.code == 1) {
+    msg = 'User denied access to use camera.';
+  }
+  document.getElementById('errorMessage').textContent = msg;
+}
+
+function capture() {
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+    return;
+  }
+
+  intervalId = setInterval(function() {
+    ctx.drawImage(video, 0, 0);
+    var img = document.createElement('img');
+    img.src = canvas.toDataURL('image/webp');
+
+    var angle = Math.floor(Math.random() * 36);
+    var sign = Math.floor(Math.random() * 2) ? 1 : -1;
+    img.style.webkitTransform = 'rotateZ(' + (sign * angle) + 'deg)';
+
+    var maxLeft = document.body.clientWidth;
+    var maxTop = document.body.clientHeight;
+
+    img.style.top = Math.floor(Math.random() * maxTop) + 'px';
+    img.style.left = Math.floor(Math.random() * maxLeft) + 'px';
+
+    gallery.appendChild(img);
+  }, 150);
+}
+
+function init(el) {
+  if (!navigator.getUserMedia) {
+    document.getElementById('errorMessage').innerHTML = 'Sorry. <code>navigator.getUserMedia()</code> is not available.';
+    return;
+  }
+  el.onclick = capture;
+  el.textContent = 'Snapshot';
+  navigator.getUserMedia({video: true}, gotStream, noStream);
+}
+
+window.addEventListener('keydown', function(e) {
+  if (e.keyCode == 27) { // ESC
+    document.querySelector('details').open = false;
+  }
+}, false);
+</script>
