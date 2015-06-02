@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zoom</title>
+	<style>
+		#imgarea{
+			width: 500px;
+			height: 300px;
+			position: relative;
+		}
+		#copyimg{
+			width: 300px;
+			height: 300px;
+		}
+		#zoom{
+			width: 90px;
+			height: 90px;
+			background-color: #cc3;
+			opacity: 0.5;
+			position: absolute;
+			z-index: 300;
+			display: none;
+			cursor: crosshair;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="imgarea" ></canvas>
+	<canvas id="copyimg" ></canvas>
+	<div id="zoom">
+		
+	</div>
+</body>
+</html>
+<script src="zoom.js"></script>
